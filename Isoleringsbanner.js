@@ -1,3 +1,5 @@
+document.write(`
+
 <div class="isolering-banner">
 
 <div class="text">
@@ -65,30 +67,14 @@ font-size:26px;
 margin-top:28px;
 opacity:0;
 transform:translateX(-40px);
-line-height:1.3;
 }
 
-.line1{
-animation:slideIn 1s forwards;
-animation-delay:1s;
-}
-
-.line2{
-animation:slideIn 1s forwards;
-animation-delay:2s;
-}
-
-.line3{
-animation:slideIn 1s forwards, pulse 3s infinite;
-animation-delay:3s;
-font-weight:bold;
-}
+.line1{animation:slideIn 1s forwards; animation-delay:1s;}
+.line2{animation:slideIn 1s forwards; animation-delay:2s;}
+.line3{animation:slideIn 1s forwards, pulse 3s infinite; animation-delay:3s;}
 
 @keyframes slideIn{
-to{
-opacity:1;
-transform:translateX(0);
-}
+to{opacity:1;transform:translateX(0);}
 }
 
 @keyframes pulse{
@@ -111,7 +97,6 @@ position:absolute;
 bottom:50px;
 right:340px;
 font-size:20px;
-line-height:1.4;
 opacity:0;
 animation:fadeIn 1s forwards;
 animation-delay:3.5s;
@@ -122,3 +107,5 @@ to{opacity:1}
 }
 
 </style>
+
+`);
