@@ -83,14 +83,7 @@ to{opacity:1;transform:translateX(0);}
 100%{transform:scale(1)}
 }
 
-.image{
-position:absolute;
-right:0;
-top:0;
-width:320px;
-height:540px;
-background:red;
-}
+background:url("https://kim4690.github.io/Isoleringsbanner/Isolering-Org-001.jpg") center/cover no-repeat;
 
 .contact{
 position:absolute;
