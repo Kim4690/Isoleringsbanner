@@ -86,7 +86,7 @@ right:0;
 top:0;
 width:420px;
 height:540px;
-background:url('isolering.jpg') center/cover no-repeat;
+background:url('Isolering-Org-001.jpg') center/cover no-repeat;
 }
 
 .contact{
