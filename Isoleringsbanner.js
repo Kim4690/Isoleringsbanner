@@ -26,7 +26,7 @@ width:420px;
 }
 
 h1{
-font-size:64px;
+font-size:56px;
 color:#ffcc00;
 margin:0;
 transform:scale(0);
@@ -86,7 +86,7 @@ right:0;
 top:0;
 width:420px;
 height:540px;
-background:url('Isolering-Org-001.jpg') center/cover no-repeat;
+background:url('./Isolering-Org-001.jpg') center/cover no-repeat;
 }
 
 .contact{
