@@ -1,5 +1,7 @@
 document.write(`
 
+<a href="mailto:kim@odsgard.dk?subject=Banner%20til%20fagsektionen%20Isolering&body=Hej%20Kim%0D%0A%0D%0AJeg%20er%20interesseret%20i%20bannerpladsen.%0D%0A%0D%0AKontakt%20mig%20venligst%20for%20flere%20informationer.%0D%0A%0D%0AKontaktoplysninger:%0D%0AKim%20Anker%0D%0Akim@odsgard.dk%0D%0AMobil:%2026%2025%2051%2022" style="text-decoration:none;">
+
 <div class="isolering-banner">
 
 <div class="text">
@@ -30,6 +32,8 @@ Mobil: 26 25 51 22
 
 </div>
 
+</a>
+
 <style>
 
 .isolering-banner{
@@ -40,6 +44,7 @@ position:relative;
 overflow:hidden;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
+cursor:pointer;
 }
 
 .text{
@@ -67,14 +72,30 @@ font-size:26px;
 margin-top:28px;
 opacity:0;
 transform:translateX(-40px);
+line-height:1.3;
 }
 
-.line1{animation:slideIn 1s forwards; animation-delay:1s;}
-.line2{animation:slideIn 1s forwards; animation-delay:2s;}
-.line3{animation:slideIn 1s forwards, pulse 3s infinite; animation-delay:3s;}
+.line1{
+animation:slideIn 1s forwards;
+animation-delay:1s;
+}
+
+.line2{
+animation:slideIn 1s forwards;
+animation-delay:2s;
+}
+
+.line3{
+animation:slideIn 1s forwards, pulse 3s infinite;
+animation-delay:3s;
+font-weight:bold;
+}
 
 @keyframes slideIn{
-to{opacity:1;transform:translateX(0);}
+to{
+opacity:1;
+transform:translateX(0);
+}
 }
 
 @keyframes pulse{
@@ -97,6 +118,7 @@ position:absolute;
 bottom:50px;
 right:340px;
 font-size:20px;
+line-height:1.4;
 opacity:0;
 animation:fadeIn 1s forwards;
 animation-delay:3.5s;
@@ -109,3 +131,15 @@ to{opacity:1}
 </style>
 
 `);
+
+setInterval(function(){
+
+var banner = document.querySelector(".isolering-banner");
+
+banner.style.display="none";
+
+setTimeout(function(){
+banner.style.display="block";
+},50);
+
+},30000);
