@@ -9,7 +9,7 @@ document.write(`
 <h1>Få dit budskab her!</h1>
 
 <div class="line line1">
-Fortæl dit budskab på BygTek.dk til brugere med stor interesse i isoleringsprodukter og løsninger
+Fortæl dit budskab på BygTek.dk til brugere med stor interesse i isoleringsprodukter og -løsninger
 </div>
 
 <div class="line line2">
@@ -57,7 +57,7 @@ Mobil: 26 25 51 22
     </div>
 
     <p style="margin-top:20px;">
-    for flere informationer om markedsøring på BygTek.dk.
+    for flere informationer om markedsføring på BygTek.dk.
     </p>
 
   </div>
