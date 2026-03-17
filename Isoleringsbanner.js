@@ -37,15 +37,26 @@ Mobil: 26 25 51 22
 <!-- OVERLAY -->
 <div class="banner-modal" id="bannerModal">
   <div class="modal-content">
+
     <span class="close" onclick="closeBannerModal()">✕</span>
+
+    <h2>Tak for din interesse</h2>
+
     <p>
     Tak for at du klikkede på banneret og din interesse i et banner på fagsektionen Isolering.<br><br>
-    Du er velkommen til at kontakte<br><br>
-    <strong>Kim Anker</strong><br>
-    kim@odsgard.dk<br>
-    26 25 51 22<br><br>
+    Du er meget velkommen til at kontakte:
+    </p>
+
+    <div class="contact-box">
+      <strong>Kim Anker</strong><br>
+      kim@odsgard.dk<br>
+      26 25 51 22
+    </div>
+
+    <p style="margin-top:20px;">
     for flere informationer.
     </p>
+
   </div>
 </div>
 
@@ -64,6 +75,7 @@ color:white;
 cursor:pointer;
 }
 
+/* SKALERING (bevarer samme look som før) */
 .text{
 position:absolute;
 left:7%;
@@ -72,7 +84,7 @@ width:58%;
 }
 
 h1{
-font-size:clamp(22px,4vw,60px);
+font-size:clamp(36px,6vw,60px);
 color:#ffc400;
 margin:0;
 transform:scale(0);
@@ -80,15 +92,16 @@ animation:zoomIn 1s ease-out forwards;
 }
 
 .line{
-font-size:clamp(12px,1.6vw,26px);
-margin-top:1.5em;
+font-size:clamp(16px,2vw,26px);
+margin-top:1.2em;
 opacity:0;
 transform:translateX(-40px);
+line-height:1.3;
 }
 
 .line1{animation:slideIn 1s forwards; animation-delay:1s;}
 .line2{animation:slideIn 1s forwards; animation-delay:2s;}
-.line3{animation:slideIn 1s forwards, pulse 3s infinite; animation-delay:3s;}
+.line3{animation:slideIn 1s forwards, pulse 3s infinite; animation-delay:3s; font-weight:bold;}
 
 .image{
 position:absolute;
@@ -103,7 +116,7 @@ background:url("https://kim4690.github.io/Isoleringsbanner/Isolering-Org-001.jpg
 position:absolute;
 bottom:8%;
 right:35%;
-font-size:clamp(10px,1.2vw,20px);
+font-size:clamp(14px,1.4vw,20px);
 }
 
 /* ANIMATION */
@@ -122,7 +135,7 @@ to{opacity:1;transform:translateX(0);}
 100%{transform:scale(1)}
 }
 
-/* MODAL */
+/* OVERLAY */
 .banner-modal{
 display:none;
 position:fixed;
@@ -130,30 +143,53 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6); /* 60% – bedre end 20% */
+background:rgba(0,0,0,0.65);
 z-index:9999;
 justify-content:center;
 align-items:center;
 }
 
 .modal-content{
-background:white;
-padding:30px;
-max-width:500px;
+background:#0b2a6f;
+color:white;
+padding:40px;
+max-width:520px;
 width:90%;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
 font-family:Arial;
-color:#000;
 position:relative;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
+/* OVERSKRIFT I MODAL */
+.modal-content h2{
+color:#ffc400;
+font-size:28px;
+margin-bottom:20px;
+}
+
+/* KONTAKT BOKS */
+.contact-box{
+margin-top:15px;
+padding:15px;
+background:rgba(255,255,255,0.1);
+border-radius:8px;
+}
+
+/* LUK KNAP */
 .close{
 position:absolute;
-top:10px;
-right:15px;
-font-size:20px;
+top:12px;
+right:18px;
+font-size:22px;
 cursor:pointer;
+color:#fff;
+}
+
+/* HOVER EFFEKT */
+.close:hover{
+color:#ffc400;
 }
 
 </style>
