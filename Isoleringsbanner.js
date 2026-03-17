@@ -2,7 +2,7 @@ document.write(`
 
 <div class="isolering-wrapper">
 
-<div class="isolering-banner" onclick="openBannerModal()">
+<div class="isolering-banner">
 
 <div class="text">
 
@@ -178,6 +178,12 @@ font-size:16px;
 line-height:1.4;
 }
 
+.banner-modal{
+display:flex;
+opacity:0;
+pointer-events:none;
+}
+
 .banner-modal.active{
 opacity:1;
 pointer-events:auto;
@@ -269,8 +275,27 @@ setInterval(function(){
 var banner = document.querySelector(".isolering-banner");
 if(!banner) return;
 banner.style.display="none";
-setTimeout(()=>banner.style.display="block",50);
-},30000);
+setTimeout(function(){
+
+var banner = document.querySelector(".isolering-banner");
+var modal = document.getElementById("bannerModal");
+
+if(banner){
+banner.addEventListener("click", function(){
+modal.classList.add("active");
+});
+}
+
+var closeBtn = document.querySelector(".close");
+
+if(closeBtn){
+closeBtn.addEventListener("click", function(e){
+e.stopPropagation();
+modal.classList.remove("active");
+});
+}
+
+},500);
 
 </script>
 
