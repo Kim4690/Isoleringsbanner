@@ -17,7 +17,7 @@ Denne plads kan blive din i 3, 6 eller 12 måneder
 </div>
 
 <div class="line line3">
-Du får alle visningerne og derfor er der kun én plads!
+Bliv vist hver gang - der er kun én plads!
 </div>
 
 </div>
