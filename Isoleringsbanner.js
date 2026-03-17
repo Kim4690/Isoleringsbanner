@@ -160,20 +160,22 @@ to{opacity:1;transform:translateX(0);}
 }
 
 /* OVERLAY */
-.banner-modal{
-display:flex;
+.modal-content{
+background:#0b2a6f;
+color:white;
+padding:40px;
+max-width:520px;
+width:90%;
+border-radius:12px;
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+position:relative;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transform:scale(0.8);
 opacity:0;
-pointer-events:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:9999;
-justify-content:center;
-align-items:center;
-transition:opacity 0.4s ease;
+transition:all 0.4s ease;
+font-size:16px;
+line-height:1.4;
 }
 
 .banner-modal.active{
