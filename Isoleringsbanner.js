@@ -28,6 +28,8 @@ kim@odsgard.dk<br>
 Mobil: 26 25 51 22
 </div>
 
+<div class="cta-btn">Læs mere</div>
+
 <div class="image"></div>
 
 </div>
@@ -75,7 +77,6 @@ color:white;
 cursor:pointer;
 }
 
-/* SKALERING (bevarer samme look som før) */
 .text{
 position:absolute;
 left:7%;
@@ -119,6 +120,11 @@ right:35%;
 font-size:clamp(14px,1.4vw,20px);
 }
 
+/* CTA KNAP */
+.cta-btn{
+display:none;
+}
+
 /* ANIMATION */
 @keyframes zoomIn{
 0%{transform:scale(0);opacity:0;}
@@ -137,7 +143,9 @@ to{opacity:1;transform:translateX(0);}
 
 /* OVERLAY */
 .banner-modal{
-display:none;
+display:flex;
+opacity:0;
+pointer-events:none;
 position:fixed;
 top:0;
 left:0;
@@ -147,6 +155,12 @@ background:rgba(0,0,0,0.65);
 z-index:9999;
 justify-content:center;
 align-items:center;
+transition:opacity 0.4s ease;
+}
+
+.banner-modal.active{
+opacity:1;
+pointer-events:auto;
 }
 
 .modal-content{
@@ -160,16 +174,22 @@ text-align:center;
 font-family:Arial;
 position:relative;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transform:scale(0.8);
+opacity:0;
+transition:all 0.4s ease;
 }
 
-/* OVERSKRIFT I MODAL */
+.banner-modal.active .modal-content{
+transform:scale(1);
+opacity:1;
+}
+
 .modal-content h2{
 color:#ffc400;
 font-size:28px;
 margin-bottom:20px;
 }
 
-/* KONTAKT BOKS */
 .contact-box{
 margin-top:15px;
 padding:15px;
@@ -177,7 +197,6 @@ background:rgba(255,255,255,0.1);
 border-radius:8px;
 }
 
-/* LUK KNAP */
 .close{
 position:absolute;
 top:12px;
@@ -187,9 +206,39 @@ cursor:pointer;
 color:#fff;
 }
 
-/* HOVER EFFEKT */
 .close:hover{
 color:#ffc400;
+}
+
+/* MOBIL */
+@media (max-width:600px){
+
+.contact{
+display:none;
+}
+
+.text{
+width:65%;
+top:12%;
+}
+
+.line{
+margin-top:1em;
+}
+
+.cta-btn{
+display:block;
+position:absolute;
+bottom:8%;
+left:7%;
+background:#ffc400;
+color:#0b2a6f;
+padding:10px 16px;
+border-radius:6px;
+font-size:14px;
+font-weight:bold;
+}
+
 }
 
 </style>
@@ -197,11 +246,11 @@ color:#ffc400;
 <script>
 
 function openBannerModal(){
-document.getElementById("bannerModal").style.display="flex";
+document.getElementById("bannerModal").classList.add("active");
 }
 
 function closeBannerModal(){
-document.getElementById("bannerModal").style.display="none";
+document.getElementById("bannerModal").classList.remove("active");
 }
 
 /* RESTART */
