@@ -1,8 +1,8 @@
 document.write(`
 
-<a href="mailto:kim@odsgard.dk?subject=Banner%20til%20fagsektionen%20Isolering&body=Hej%20Kim%0D%0A%0D%0AJeg%20er%20interesseret%20i%20bannerpladsen.%0D%0A%0D%0AKontakt%20mig%20venligst%20for%20flere%20informationer.%0D%0A%0D%0AKontaktoplysninger:%0D%0AKim%20Anker%0D%0Akim@odsgard.dk%0D%0AMobil:%2026%2025%2051%2022" style="text-decoration:none;">
+<div class="isolering-wrapper">
 
-<div class="isolering-banner">
+<div class="isolering-banner" onclick="openBannerModal()">
 
 <div class="text">
 
@@ -32,13 +32,30 @@ Mobil: 26 25 51 22
 
 </div>
 
-</a>
+</div>
+
+<!-- OVERLAY -->
+<div class="banner-modal" id="bannerModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeBannerModal()">✕</span>
+    <p>
+    Tak for at du klikkede på banneret og din interesse i et banner på fagsektionen Isolering.<br><br>
+    Du er velkommen til at kontakte<br><br>
+    <strong>Kim Anker</strong><br>
+    kim@odsgard.dk<br>
+    26 25 51 22<br><br>
+    for flere informationer.
+    </p>
+  </div>
+</div>
 
 <style>
 
+/* BANNER */
 .isolering-banner{
-width:980px;
-height:540px;
+width:100%;
+max-width:980px;
+aspect-ratio:980/540;
 background:#0b2a6f;
 position:relative;
 overflow:hidden;
@@ -49,53 +66,54 @@ cursor:pointer;
 
 .text{
 position:absolute;
-left:70px;
-top:90px;
-width:560px;
+left:7%;
+top:17%;
+width:58%;
 }
 
-.isolering-banner h1{
-font-size:60px;
+h1{
+font-size:clamp(22px,4vw,60px);
 color:#ffc400;
 margin:0;
 transform:scale(0);
 animation:zoomIn 1s ease-out forwards;
 }
 
+.line{
+font-size:clamp(12px,1.6vw,26px);
+margin-top:1.5em;
+opacity:0;
+transform:translateX(-40px);
+}
+
+.line1{animation:slideIn 1s forwards; animation-delay:1s;}
+.line2{animation:slideIn 1s forwards; animation-delay:2s;}
+.line3{animation:slideIn 1s forwards, pulse 3s infinite; animation-delay:3s;}
+
+.image{
+position:absolute;
+right:0;
+top:0;
+width:33%;
+height:100%;
+background:url("https://kim4690.github.io/Isoleringsbanner/Isolering-Org-001.jpg") center/cover no-repeat;
+}
+
+.contact{
+position:absolute;
+bottom:8%;
+right:35%;
+font-size:clamp(10px,1.2vw,20px);
+}
+
+/* ANIMATION */
 @keyframes zoomIn{
 0%{transform:scale(0);opacity:0;}
 100%{transform:scale(1);opacity:1;}
 }
 
-.line{
-font-size:26px;
-margin-top:28px;
-opacity:0;
-transform:translateX(-40px);
-line-height:1.3;
-}
-
-.line1{
-animation:slideIn 1s forwards;
-animation-delay:1s;
-}
-
-.line2{
-animation:slideIn 1s forwards;
-animation-delay:2s;
-}
-
-.line3{
-animation:slideIn 1s forwards, pulse 3s infinite;
-animation-delay:3s;
-font-weight:bold;
-}
-
 @keyframes slideIn{
-to{
-opacity:1;
-transform:translateX(0);
-}
+to{opacity:1;transform:translateX(0);}
 }
 
 @keyframes pulse{
@@ -104,42 +122,60 @@ transform:translateX(0);
 100%{transform:scale(1)}
 }
 
-.image{
-position:absolute;
-right:0;
+/* MODAL */
+.banner-modal{
+display:none;
+position:fixed;
 top:0;
-width:320px;
-height:540px;
-background:url("https://kim4690.github.io/Isoleringsbanner/Isolering-Org-001.jpg") center/cover no-repeat;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6); /* 60% – bedre end 20% */
+z-index:9999;
+justify-content:center;
+align-items:center;
 }
 
-.contact{
+.modal-content{
+background:white;
+padding:30px;
+max-width:500px;
+width:90%;
+border-radius:10px;
+text-align:center;
+font-family:Arial;
+color:#000;
+position:relative;
+}
+
+.close{
 position:absolute;
-bottom:50px;
-right:340px;
+top:10px;
+right:15px;
 font-size:20px;
-line-height:1.4;
-opacity:0;
-animation:fadeIn 1s forwards;
-animation-delay:3.5s;
-}
-
-@keyframes fadeIn{
-to{opacity:1}
+cursor:pointer;
 }
 
 </style>
 
-`);
+<script>
 
+function openBannerModal(){
+document.getElementById("bannerModal").style.display="flex";
+}
+
+function closeBannerModal(){
+document.getElementById("bannerModal").style.display="none";
+}
+
+/* RESTART */
 setInterval(function(){
-
 var banner = document.querySelector(".isolering-banner");
-
+if(!banner) return;
 banner.style.display="none";
-
-setTimeout(function(){
-banner.style.display="block";
-},50);
-
+setTimeout(()=>banner.style.display="block",50);
 },30000);
+
+</script>
+
+`);
