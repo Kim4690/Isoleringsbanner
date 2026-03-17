@@ -17,7 +17,7 @@ Denne plads kan blive din i 3, 6 eller 12 måneder
 </div>
 
 <div class="line line3">
-Der er kun én plads!
+Du får alle visningerne og derfor er der kun én plads!
 </div>
 
 </div>
@@ -49,7 +49,7 @@ Mobil: 26 25 51 22
     <h2>Tak for din interesse</h2>
 
     <p>
-    Tak for at du klikkede på banneret på fagsektionen Isolering.<br><br>
+    Og at du klikkede på banneret på fagsektionen Isolering.<br><br>
     Du er meget velkommen til at kontakte:
     </p>
 
@@ -60,7 +60,7 @@ Mobil: 26 25 51 22
     </div>
 
     <p style="margin-top:20px;">
-    for flere informationer.
+    for flere informationer om markedsføring på BygTek.dk.
     </p>
 
   </div>
