@@ -17,7 +17,7 @@ Denne plads kan blive din i 3, 6 eller 12 måneder
 </div>
 
 <div class="line line3">
-Der er kun én plads!
+Dit budskab vises hver gang - Der er er kun én plads!
 </div>
 
 </div>
