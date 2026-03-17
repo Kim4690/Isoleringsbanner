@@ -183,18 +183,11 @@ opacity:1;
 pointer-events:auto;
 }
 
-.modal-content{
-background:#0b2a6f;
-color:white;
-padding:40px;
-max-width:520px;
-width:90%;
-border-radius:12px;
-text-align:center;
-position:relative;
-transform:scale(0.8);
-opacity:0;
-transition:all 0.4s ease;
+.modal-content h2{
+color:#ffc400;
+font-size:26px;
+margin-bottom:15px;
+font-weight:bold;
 }
 
 .banner-modal.active .modal-content{
@@ -208,9 +201,9 @@ color:#ffc400;
 
 .contact-box{
 margin-top:15px;
-padding:15px;
-background:rgba(255,255,255,0.1);
-border-radius:8px;
+padding:0;
+background:none;
+border-radius:0;
 }
 
 .close{
