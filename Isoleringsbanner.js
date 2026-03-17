@@ -46,7 +46,7 @@ Mobil: 26 25 51 22
     <h2>Tak for din interesse</h2>
 
     <p>
-    Tak for at du klikkede på banneret og din interesse i et banner på fagsektionen Isolering.<br><br>
+    Tak for at du klikkede på banneret på fagsektionen Isolering.<br><br>
     Du er meget velkommen til at kontakte:
     </p>
 
@@ -57,7 +57,7 @@ Mobil: 26 25 51 22
     </div>
 
     <p style="margin-top:20px;">
-    for flere informationer.
+    for flere informationer om markedsøring på BygTek.dk.
     </p>
 
   </div>
