@@ -17,7 +17,7 @@ Denne plads kan blive din i 3, 6 eller 12 måneder
 </div>
 
 <div class="line line3">
-Der er kun én plads!
+Bliv vist hver gang - Der er kun én plads!
 </div>
 
 </div>
@@ -76,7 +76,7 @@ aspect-ratio:980/540;
 background:#0b2a6f;
 position:relative;
 overflow:hidden;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial, sans-serif;
 color:white;
 cursor:pointer;
 }
